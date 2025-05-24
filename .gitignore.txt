@@ -1,3 +1,4 @@
+/cs50env/
 cs50env/
 venv/
 

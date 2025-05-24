@@ -3,8 +3,8 @@
 #prompt user
 answer = input("What is the Answer to the Great Question of Life, the Universe, and Everything? ")
 
-#ensure answer works case-insensitively
-answer = answer.lower()
+#ensure answer works case-insensitively and regardless of whitespace
+answer = answer.lower().strip()
 
 #check equivalency and output answer
 if answer == "42" or answer == "forty-two" or answer == "forty two":

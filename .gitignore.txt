@@ -1,0 +1,7 @@
+cs50env/
+venv/
+
+.vscode/
+
+.env
+*.env

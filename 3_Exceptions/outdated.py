@@ -25,13 +25,21 @@ while True:
         if len(dateList) != 3:
             continue
         #spacing format starts here
-        if dateList[0] not in months or not (31 >= int(dateList[1][0]) >= 0):
+        #removing comma from month, but first make sure a comma is actually there
+        try:
+            dateList[1] = dateList[1][:dateList[1].index(",")]
+        except ValueError:
             continue
-        print(f"{dateList[2]}-{dateList[0]}-{dateList[1][0]} ")
+        if dateList[0] not in months or not (31 >= int(dateList[1]) >= 0):
+            continue
+        print(f"{int(dateList[2]):04d}-{months.index(dateList[0])+1:02d}-{int(dateList[1]):02d} ")
         break
     #slash format
     #month and day must be valid
-    if not(12 >= int(dateList[0]) >= 1) or not(31 >= int(dateList[1]) >= 1):
+    try:
+        if not(12 >= int(dateList[0]) >= 1) or not(31 >= int(dateList[1]) >= 1):
+            continue
+        print(f"{int(dateList[2]):04d}-{int(dateList[0]):02d}-{int(dateList[1]):02d} ")
+        break
+    except ValueError:
         continue
-    print(f"{dateList[2]}-{dateList[0]}-{dateList[1]} ")
-    break

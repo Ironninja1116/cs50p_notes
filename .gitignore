@@ -6,3 +6,4 @@ venv/
 
 .env
 *.env
+4_Libraries/__pycache__/sayings.cpython-312.pyc

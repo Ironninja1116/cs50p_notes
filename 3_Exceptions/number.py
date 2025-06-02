@@ -1,4 +1,4 @@
-# Section 2 Notes Segment 1
+# Section 3 Notes Segment 1
 
 #try except statements
 '''
